@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Byte Byte Dark",
+  "version": "1.0.1",
+  "description": "Change website theme to dark",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://bytebytego.com/*", "*://*.bytebytego.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ],
+  "icons": {
+    "128": "icon.png"
+  }
+}
